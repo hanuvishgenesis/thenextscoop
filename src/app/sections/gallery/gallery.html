@@ -1,0 +1,12 @@
+<section class="gallery" aria-labelledby="gallery-title">
+  <div class="section-heading">
+    <p class="eyebrow">Visual mood</p>
+    <h2 id="gallery-title">An atmosphere that feels as indulgent as the scoop itself.</h2>
+  </div>
+  <div class="gallery-grid">
+    <article class="gallery-card" *ngFor="let image of images">
+      <div class="gallery-visual"></div>
+      <p>{{ image }}</p>
+    </article>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+<section class="features" id="craft" aria-labelledby="features-title">
+  <div class="section-heading">
+    <p class="eyebrow">Crafted with intention</p>
+    <h2 id="features-title">Every detail feels effortless, refined, and memorable.</h2>
+  </div>
+  <div class="feature-list">
+    <article class="feature-card" *ngFor="let feature of features">
+      <h3>{{ feature.title }}</h3>
+      <p>{{ feature.text }}</p>
+    </article>
+  </div>
+</section>

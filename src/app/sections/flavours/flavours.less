@@ -1,0 +1,51 @@
+.flavours {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: clamp(1rem, 2vw, 2rem);
+}
+
+.section-heading {
+  margin-bottom: 1.5rem;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(1.7rem, 2.4vw, 2.3rem);
+  color: #2d140f;
+}
+
+.flavour-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.flavour-card {
+  padding: 1.4rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(128, 0, 0, 0.08);
+  box-shadow: 0 18px 45px rgba(128, 0, 0, 0.06);
+}
+
+.flavour-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.flavour-card h3 {
+  margin: 0 0 0.35rem;
+  color: #800000;
+}
+
+.flavour-card p {
+  margin: 0;
+  color: #6b433e;
+  line-height: 1.65;
+}
+
+@media (max-width: 800px) {
+  .flavour-grid {
+    grid-template-columns: 1fr;
+  }
+}
