@@ -1,163 +1,59 @@
-# The Next Scoop - Ice Cream Shop Landing Page
+# TheNextScoop
 
-A modern, responsive Angular landing page for an ice cream shop with a maroon and white theme.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.6.
 
-## Features
+## Development server
 
-✨ **Modern Design**
-- Maroon and white color scheme
-- Clean, professional layout
-- Fully responsive design
-- Smooth animations and transitions
-
-📱 **Responsive Layout**
-- Mobile-friendly navigation
-- Adaptive grid layouts
-- Touch-friendly buttons and links
-
-🧩 **Components**
-- **Header**: Sticky navigation with mobile menu
-- **Hero**: Eye-catching landing section
-- **Features**: Why choose us section
-- **Menu**: Ice cream flavors showcase
-- **About**: Store information and statistics
-- **Contact**: Contact form and information
-- **Footer**: Navigation and company details
-
-## Project Structure
-
-```
-src/
-├── app/
-│   ├── components/
-│   │   ├── header/
-│   │   ├── hero/
-│   │   ├── features/
-│   │   ├── menu/
-│   │   ├── about/
-│   │   ├── contact/
-│   │   └── footer/
-│   └── app.component.ts
-├── styles.scss          (Global styles)
-├── variables.scss       (Color variables)
-└── main.ts             (Entry point)
-```
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (v18 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd thenextscoop
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Start the development server:
-```bash
-npm start
-```
-
-4. Open your browser and navigate to `http://localhost:4200`
-
-## Development
-
-### Build for Production
+To start a local development server, run:
 
 ```bash
-npm run build
+ng serve
 ```
 
-### Run Tests
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Code scaffolding
+
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
 ```bash
-npm test
+ng generate component component-name
 ```
 
-## Color Palette
-
-- **Primary Maroon**: #800000
-- **Light Maroon**: #a52a2a
-- **Dark Maroon**: #5c0a0a
-- **White**: #ffffff
-- **Light Gray**: #f5f5f5
-
-## Customization
-
-### Change Shop Information
-
-Update the following files with your information:
-- `src/app/components/header/header.component.html` - Shop name and logo
-- `src/app/components/contact/contact.component.html` - Contact details
-- `src/app/components/about/about.component.html` - About section
-- `src/app/components/menu/menu.component.ts` - Menu items
-
-### Modify Colors
-
-Edit `src/variables.scss` to change the color scheme:
-
-```scss
-$primary-maroon: #YOUR_COLOR;
-$light-maroon: #YOUR_COLOR;
-$dark-maroon: #YOUR_COLOR;
-```
-
-### Add Your Domain
-
-Update `src/index.html` to add your domain:
-
-```html
-<meta property="og:url" content="https://yourdomain.com">
-```
-
-## Hosting
-
-This Angular app can be deployed to:
-- **Vercel**: Perfect for Angular apps with serverless functions
-- **Netlify**: Easy deployment with CI/CD
-- **GitHub Pages**: Free hosting option
-- **Firebase Hosting**: Google's hosting solution
-- **AWS S3 + CloudFront**: Production-grade solution
-
-### Deploy to Vercel
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
 ```bash
-npm install -g vercel
-vercel
+ng generate --help
 ```
 
-## Browser Support
+## Building
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+To build the project run:
 
-## Technologies Used
+```bash
+ng build
+```
 
-- **Angular 17+**: Modern web framework
-- **TypeScript**: Type-safe JavaScript
-- **SCSS**: Advanced styling
-- **Standalone Components**: Latest Angular pattern
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## License
+## Running unit tests
 
-This project is private and belongs to The Next Scoop.
+To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
 
-## Contact
+```bash
+ng test
+```
 
-For questions or support, contact: hello@thenextscoop.com
+## Running end-to-end tests
 
----
+For end-to-end (e2e) testing, run:
 
-Made with ❤️ for The Next Scoop
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

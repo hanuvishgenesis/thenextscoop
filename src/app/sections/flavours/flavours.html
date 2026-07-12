@@ -1,0 +1,13 @@
+<section class="flavours" id="flavours" aria-labelledby="flavours-title">
+  <div class="section-heading">
+    <p class="eyebrow">Seasonal flavours</p>
+    <h2 id="flavours-title">A tasting menu of elegant indulgence.</h2>
+  </div>
+  <div class="flavour-grid">
+    <article class="flavour-card" *ngFor="let flavour of flavours">
+      <div class="flavour-icon" aria-hidden="true">{{ flavour.accent }}</div>
+      <h3>{{ flavour.name }}</h3>
+      <p>{{ flavour.note }}</p>
+    </article>
+  </div>
+</section>
