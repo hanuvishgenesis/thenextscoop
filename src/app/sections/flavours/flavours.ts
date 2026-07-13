@@ -8,9 +8,30 @@ import { Component } from '@angular/core';
   styleUrl: './flavours.less',
 })
 export class Flavours {
-  readonly flavours = [
-    { name: 'Cocoa Velvet', note: 'Dark chocolate, sea salt, espresso', accent: '🍫' },
-    { name: 'Rose Petal', note: 'Blooming petals, vanilla bean, berry', accent: '🌹' },
-    { name: 'Caramel Citrus', note: 'Toffee swirl, orange zest, crème fraîche', accent: '🍊' },
+  readonly products = [
+    {
+      name: 'ICE CREAMS',
+      icon: '🍦',
+      description: 'Premium handcrafted scoops with bold and delicate flavours. From classic favorites to exotic blends.',
+      route: '/ice-creams',
+    },
+    {
+      name: 'SHAKES',
+      icon: '🥤',
+      description: 'Creamy, dreamy shakes blended to perfection. Rich textures that melt in your mouth.',
+      route: '/shakes',
+    },
+    {
+      name: 'MOJITOS',
+      icon: '🍹',
+      description: 'Refreshing mojito-inspired ice cream cocktails. Cool, vibrant, and utterly refreshing.',
+      route: '/mojitos',
+    },
+    {
+      name: 'CAKES',
+      icon: '🎂',
+      description: 'Decadent ice cream cakes for every celebration. Custom creations that steal the show.',
+      route: '/cakes',
+    },
   ];
 }

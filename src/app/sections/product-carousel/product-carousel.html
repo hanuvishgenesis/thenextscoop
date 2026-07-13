@@ -1,31 +1,7 @@
-<section class="features" id="craft" aria-labelledby="products-detail-title">
-  <div class="section-heading">
-    <p class="eyebrow">Explore Our Rangessss</p>
-    <h2 id="products-detail-title">Flavours, Sauces & Toppings. Craft Your Perfect Indulgence.</h2>
-  </div>
-
-  <div class="products-tabs">
-    <button 
-      class="tab-button" 
-      [class.active]="activeTab === 'flavours'"
-      (click)="setTab('flavours')"
-      aria-label="View flavours">
-      FLAVOURS
-    </button>
-    <button 
-      class="tab-button" 
-      [class.active]="activeTab === 'sauces'"
-      (click)="setTab('sauces')"
-      aria-label="View sauces">
-      SAUCES
-    </button>
-    <button 
-      class="tab-button" 
-      [class.active]="activeTab === 'toppings'"
-      (click)="setTab('toppings')"
-      aria-label="View toppings">
-      TOPPINGS
-    </button>
+<section class="product-carousel-page">
+  <div class="carousel-header">
+    <h1>{{ title }}</h1>
+    <p>{{ subtitle }}</p>
   </div>
 
   <div class="carousel-container">

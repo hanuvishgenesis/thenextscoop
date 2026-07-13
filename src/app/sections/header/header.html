@@ -6,7 +6,7 @@
     <span>The Next Scoop</span>
   </a>
   <nav class="nav-links" aria-label="Section navigation">
-    <a *ngFor="let item of navItems" [href]="'#' + item.toLowerCase()">{{ item }}</a>
+    <a *ngFor="let item of navItems" [href]="'#' + item.target">{{ item.label }}</a>
   </nav>
-  <a class="nav-cta" href="#contact">Book a tasting</a>
+  <a class="nav-cta" href="#contact-us">Order</a>
 </header>
