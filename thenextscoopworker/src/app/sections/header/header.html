@@ -1,0 +1,12 @@
+<header class="site-header" aria-label="Primary">
+  <a class="brand" href="#top" aria-label="The Next Scoop home">
+    <span class="brand-mark" aria-hidden="true">
+      <img src="/assets/favicon.png" alt="The Next Scoop logo" />
+    </span>
+    <span>The Next Scoop</span>
+  </a>
+  <nav class="nav-links" aria-label="Section navigation">
+    <a *ngFor="let item of navItems" [href]="'#' + item.target">{{ item.label }}</a>
+  </nav>
+  <a class="nav-cta" href="#contact-us">Order</a>
+</header>

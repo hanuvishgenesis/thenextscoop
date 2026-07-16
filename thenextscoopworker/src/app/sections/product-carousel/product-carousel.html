@@ -1,0 +1,41 @@
+<section class="product-carousel-page">
+  <div class="carousel-header">
+    <h1>{{ title }}</h1>
+    <p>{{ subtitle }}</p>
+  </div>
+
+  <div class="carousel-container">
+    <button class="carousel-arrow carousel-arrow-prev" (click)="prevItem()" aria-label="Previous item">‹</button>
+    
+    <div class="carousel-main">
+      <div class="product-image-wrapper">
+        <img 
+          *ngIf="currentItem.image" 
+          [src]="currentItem.image" 
+          [alt]="currentItem.name"
+          class="product-image"
+        />
+        <div *ngIf="!currentItem.image" class="product-image-placeholder">
+          [Image: {{ currentItem.name }}]
+        </div>
+      </div>
+    </div>
+    
+    <button class="carousel-arrow carousel-arrow-next" (click)="nextItem()" aria-label="Next item">›</button>
+  </div>
+
+  <div class="product-details">
+    <h3>{{ currentItem.name }}</h3>
+    <p>{{ currentItem.description }}</p>
+  </div>
+
+  <div class="carousel-indicators">
+    <button 
+      *ngFor="let item of currentItems; let i = index" 
+      class="indicator" 
+      [class.active]="i === activeIndex"
+      (click)="activeIndex = i"
+      [attr.aria-label]="'Go to ' + item.name">
+    </button>
+  </div>
+</section>

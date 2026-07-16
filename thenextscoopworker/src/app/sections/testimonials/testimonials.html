@@ -1,0 +1,12 @@
+<section class="testimonials" aria-labelledby="testimonials-title">
+  <div class="section-heading">
+    <p class="eyebrow">Loved by dessert devotees</p>
+    <h2 id="testimonials-title">What guests remember long after the last spoonful.</h2>
+  </div>
+  <div class="testimonial-list">
+    <article class="testimonial-card" *ngFor="let item of testimonials">
+      <p>“{{ item.quote }}”</p>
+      <strong>{{ item.name }}</strong>
+    </article>
+  </div>
+</section>

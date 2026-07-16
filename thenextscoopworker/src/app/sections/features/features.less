@@ -1,0 +1,243 @@
+.features {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: clamp(1rem, 2vw, 2rem);
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-heading h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+  color: #2d140f;
+  line-height: 1.2;
+}
+
+.products-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 2px solid rgba(128, 0, 0, 0.12);
+  padding-bottom: 1rem;
+}
+
+.tab-button {
+  position: relative;
+  padding: 0.8rem 1.5rem;
+  background: none;
+  border: none;
+  color: #6b433e;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: color 200ms ease;
+  text-transform: uppercase;
+}
+
+.tab-button:hover {
+  color: #800000;
+}
+
+.tab-button.active {
+  color: #800000;
+}
+
+.tab-button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #800000, #a52a2a);
+}
+
+.carousel-container {
+  display: grid;
+  grid-template-columns: 60px 1fr 60px;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  min-height: 350px;
+}
+
+.carousel-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 250, 248, 0.9));
+  border: 2px solid rgba(128, 0, 0, 0.08);
+}
+
+.product-image-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.product-image {
+  max-width: 100%;
+  max-height: 350px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  animation: imageSlideIn 300ms ease-in-out;
+}
+
+.product-image-placeholder {
+  text-align: center;
+  color: #a52a2a;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.carousel-arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #800000;
+  color: #fffaf8;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 180ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.carousel-arrow:hover {
+  background: #a52a2a;
+  transform: scale(1.1);
+}
+
+.carousel-arrow:active {
+  transform: scale(0.95);
+}
+
+.product-details {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(128, 0, 0, 0.04), rgba(165, 42, 42, 0.02));
+  margin-bottom: 1.5rem;
+  animation: fadeIn 300ms ease-in-out;
+}
+
+.product-details h3 {
+  margin: 0 0 0.6rem;
+  color: #800000;
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+}
+
+.product-details p {
+  margin: 0;
+  color: #6b433e;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(128, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+
+.indicator.active {
+  background: #800000;
+  width: 30px;
+  border-radius: 5px;
+}
+
+.indicator:hover {
+  background: rgba(128, 0, 0, 0.5);
+}
+
+@keyframes imageSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .carousel-container {
+    grid-template-columns: 40px 1fr 40px;
+    gap: 0.75rem;
+    min-height: 280px;
+  }
+
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+
+  .product-image {
+    max-height: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-container {
+    grid-template-columns: 35px 1fr 35px;
+    min-height: 220px;
+  }
+
+  .carousel-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+
+  .product-image {
+    max-height: 220px;
+  }
+
+  .products-tabs {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tab-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+}

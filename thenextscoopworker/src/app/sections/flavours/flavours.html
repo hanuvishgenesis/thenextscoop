@@ -1,0 +1,15 @@
+<section class="flavours" id="our-products" aria-labelledby="products-title">
+  <div class="section-heading">
+    <p class="eyebrow">Explore Our Range</p>
+    <h2 id="products-title">Indulgence in every form. Find your perfect treat.</h2>
+    <p class="section-subtitle">From iconic ice creams to refreshing mojitos, we've crafted something special for every craving.</p>
+  </div>
+  <div class="products-grid">
+    <article class="product-card" *ngFor="let product of products">
+      <div class="product-icon">{{ product.icon }}</div>
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <a [href]="product.route" class="product-link">Discover</a>
+    </article>
+  </div>
+</section>

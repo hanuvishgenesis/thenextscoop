@@ -1,0 +1,65 @@
+<section class="features" id="craft" aria-labelledby="products-detail-title">
+  <div class="section-heading">
+    <p class="eyebrow">Explore Our Rangessss</p>
+    <h2 id="products-detail-title">Flavours, Sauces & Toppings. Craft Your Perfect Indulgence.</h2>
+  </div>
+
+  <div class="products-tabs">
+    <button 
+      class="tab-button" 
+      [class.active]="activeTab === 'flavours'"
+      (click)="setTab('flavours')"
+      aria-label="View flavours">
+      FLAVOURS
+    </button>
+    <button 
+      class="tab-button" 
+      [class.active]="activeTab === 'sauces'"
+      (click)="setTab('sauces')"
+      aria-label="View sauces">
+      SAUCES
+    </button>
+    <button 
+      class="tab-button" 
+      [class.active]="activeTab === 'toppings'"
+      (click)="setTab('toppings')"
+      aria-label="View toppings">
+      TOPPINGS
+    </button>
+  </div>
+
+  <div class="carousel-container">
+    <button class="carousel-arrow carousel-arrow-prev" (click)="prevItem()" aria-label="Previous item">‹</button>
+    
+    <div class="carousel-main">
+      <div class="product-image-wrapper">
+        <img 
+          *ngIf="currentItem.image" 
+          [src]="currentItem.image" 
+          [alt]="currentItem.name"
+          class="product-image"
+        />
+        <div *ngIf="!currentItem.image" class="product-image-placeholder">
+          [Image: {{ currentItem.name }}]
+        </div>
+      </div>
+    </div>
+    
+    <button class="carousel-arrow carousel-arrow-next" (click)="nextItem()" aria-label="Next item">›</button>
+  </div>
+
+  <div class="product-details">
+    <h3>{{ currentItem.name }}</h3>
+    <p>{{ currentItem.description }}</p>
+  </div>
+
+  <div class="carousel-indicators">
+    <button 
+      *ngFor="let item of currentItems; let i = index" 
+      class="indicator" 
+      [class.active]="i === activeIndex"
+      (click)="activeIndex = i"
+      [attr.aria-label]="'Go to ' + item.name">
+    </button>
+  </div>
+</section>

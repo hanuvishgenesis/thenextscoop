@@ -1,0 +1,12 @@
+<section class="specials" aria-labelledby="specials-title">
+  <div class="section-heading">
+    <p class="eyebrow">This week’s specials</p>
+    <h2 id="specials-title">Two signatures made to linger on the palate.</h2>
+  </div>
+  <div class="special-grid">
+    <article class="special-card" *ngFor="let special of specials">
+      <h3>{{ special.title }}</h3>
+      <p>{{ special.text }}</p>
+    </article>
+  </div>
+</section>
