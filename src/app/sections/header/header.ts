@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './header.less',
 })
 export class Header {
-  readonly navItems = ['Flavours', 'Craft', 'Stories', 'Visit'];
+  readonly navItems = [
+    { label: 'Our Story', target: 'our-story' },
+    { label: 'Our Products', target: 'our-products' },
+    { label: 'Contact Us', target: 'contact-us' }
+  ];
 }
