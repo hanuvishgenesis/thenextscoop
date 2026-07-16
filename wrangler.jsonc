@@ -4,6 +4,7 @@
     // Set this to today's date
     "compatibility_date": "2026-07-16",
     "assets": {
-      "directory": "./dist/thenextscoopcloudflare/browser"
+      "directory": "./dist/thenextscoopcloudflare/browser",
+      "run_worker_first": true
     }
   }
